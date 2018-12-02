@@ -1,2 +1,2 @@
-# antenado
-Antenado is a smart tv implementation with NodeJS, Electron and VueJS
+# Antenado
+Antenado is a smart tv implementation with NodeJS, Electron and ReactJS

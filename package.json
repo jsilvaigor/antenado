@@ -1,0 +1,26 @@
+{
+  "name": "antenado",
+  "version": "0.0.1",
+  "description": "Antenado is a smart tv implementation in NodeJS, Electron and VueJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsilvaigor/antenado.git"
+  },
+  "keywords": [
+    "nodejs",
+    "electron",
+    "react",
+    "raspberrypi"
+  ],
+  "author": "Igor Silva <igorjose15@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsilvaigor/antenado/issues"
+  },
+  "homepage": "https://github.com/jsilvaigor/antenado#readme"
+}
