@@ -1,11 +1,15 @@
 {
   "name": "antenado",
   "version": "0.0.1",
-  "description": "Antenado is a smart tv implementation in NodeJS, Electron and VueJS",
-  "main": "index.js",
+  "description": "Antenado is a smart tv implementation in NodeJS, Electron and ReactJS",
+  "main": "main.js",
+  "homepage": "./",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron ."
   },
   "repository": {
     "type": "git",
@@ -22,5 +26,21 @@
   "bugs": {
     "url": "https://github.com/jsilvaigor/antenado/issues"
   },
-  "homepage": "https://github.com/jsilvaigor/antenado#readme"
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "^2.1.1"
+  },
+  "devDependencies": {
+    "electron": "^3.0.10"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
