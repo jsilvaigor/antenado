@@ -2,14 +2,18 @@
   "name": "antenado",
   "version": "0.0.1",
   "description": "Antenado is a smart tv implementation in NodeJS, Electron and ReactJS",
-  "main": "main.js",
+  "main": "electron/boot.js",
   "homepage": "./",
   "scripts": {
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "electron ."
+    "electron": "electron .",
+    "preelectron-pack": "npm install && rm -rf dist/ build/ && npm run build",
+    "electron-pack": "build",
+    "build-linux": "build --linux --armv7l",
+    "dist": "./dist/mac/antenado.app/Contents/MacOS/antenado"
   },
   "repository": {
     "type": "git",
@@ -27,12 +31,17 @@
     "url": "https://github.com/jsilvaigor/antenado/issues"
   },
   "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "dotenv": "^6.1.0",
+    "joi": "^14.3.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1"
   },
   "devDependencies": {
-    "electron": "^3.0.10"
+    "electron": "^3.0.10",
+    "electron-builder": "^20.38.2"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,5 +51,16 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "build": {
+    "appId": "us.antenado.smarttv",
+    "files": [
+      "build/**/*",
+      "electron/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
 }
